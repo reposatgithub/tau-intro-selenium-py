@@ -7,7 +7,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 
-
 class DuckDuckGoSearchPage:
 
     # URL
@@ -15,7 +14,7 @@ class DuckDuckGoSearchPage:
 
     # Locators
 
-    SEARCH_INPUT = (By.ID, 'searchbox_homepage')
+    SEARCH_INPUT = (By.ID, 'searchbox_input')
 
     # Initializer
 

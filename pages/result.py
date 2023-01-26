@@ -10,7 +10,7 @@ class DuckDuckGoResultPage:
     # Locators
 
     RESULT_LINKS = (By.CSS_SELECTOR,  "a.result__a")
-    SEARCH_INPU = (By.ID, 'searchbox_homepage')
+    SEARCH_INPUT = (By.ID, 'search_form_input')
 
     # Initializer
 
@@ -27,7 +27,7 @@ class DuckDuckGoResultPage:
 
     def search_input_value(self):
         search_input = self.browser.find_element(*self.SEARCH_INPUT)
-        value = search_input.get_attribute('value')
+        value = search_input.get_attribute('value')        
         return value
 
     def title(self):
