@@ -14,7 +14,8 @@ class DuckDuckGoSearchPage:
 
     # Locators
 
-    SEARCH_INPUT = (By.ID, 'searchbox_input')
+    SEARCH_INPUT = (By.ID, 'searchbox_input')            # Chrome
+    #SEARCH_INPUT = (By.ID, 'search_form_input_homepage')  # Firefox
 
     # Initializer
 

@@ -32,3 +32,6 @@ def test_basic_duckduckgo_search(browser):
     titles = result_page.result_link_titles()
     matches = [t for t in titles if PHRASE.lower() in t.lower()]
     assert len(matches) > 0
+
+    # Add the search result title contains "panda"
+    assert PHRASE in result_page.title()

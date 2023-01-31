@@ -6,6 +6,7 @@ import pytest
 import selenium.webdriver
 
 import time
+from selenium.webdriver.firefox.options import Options
 
 @pytest.fixture
 def config(scope='session'):
@@ -29,7 +30,9 @@ def browser(config):
     
     # Initialize the ChromeDriver instance
     if config['browser'] == 'Firefox':
-        b = selenium.webdriver.Firefox()
+        options = Options()
+        options.binary_location = r'C:\Users\a.sharma\AppData\Local\Mozilla Firefox\firefox.exe'
+        b = selenium.webdriver.Firefox(executable_path=r'C:\Users\a.sharma\Selenium\geckodriver.exe', options=options)
     elif config['browser'] == 'Chrome':
         b = selenium.webdriver.Chrome()
     elif config['browser'] == 'Headless Chrome':
